@@ -3,8 +3,8 @@ from flask import render_template
 app = Flask (__name__)
 
 @app.route('/')
-def hello_world():
-    return 'Hello, World!1234'
+def root():
+    return '<script>location.href="https://smartstore.naver.com/urban-incard";</script>'
     
 @app.route('/abc')
 def abc():
