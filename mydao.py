@@ -6,7 +6,7 @@ class MyEmpDao:
     
     def getEmps(self):
         ret = []
-        db = pymysql.connect(host='marrycard.mysql.pythonanywhere-services.com', user='marrycard', db='marrycard$marrycard', password='wndnjsWkd!2', charset='utf8')
+        db = pymysql.connect(host='marrycard.mysql.pythonanywhere-services.com', user='marrycard', db='marrycard$merrycard', password='wndnjsWkd!2', charset='utf8')
         curs = db.cursor()
         
         sql = "select * from emp";
@@ -23,7 +23,7 @@ class MyEmpDao:
         
     def testEmps(self, empno):
         ret = []
-        db = pymysql.connect(host='marrycard.mysql.pythonanywhere-services.com', user='marrycard', db='marrycard$marrycard', password='wndnjsWkd!2', charset='utf8')
+        db = pymysql.connect(host='marrycard.mysql.pythonanywhere-services.com', user='marrycard', db='marrycard$merrycard', password='wndnjsWkd!2', charset='utf8')
         curs = db.cursor()
         
         sql = "select * from emp where idx = " + str(empno) + " ;" 
@@ -36,7 +36,7 @@ class MyEmpDao:
         return ret
     
     def insEmp(self, empno, name, department,phone):
-        db = pymysql.connect(host='marrycard.mysql.pythonanywhere-services.com', user='marrycard', db='marrycard$marrycard', password='wndnjsWkd!2', charset='utf8')
+        db = pymysql.connect(host='marrycard.mysql.pythonanywhere-services.com', user='marrycard', db='marrycard$merrycard', password='wndnjsWkd!2', charset='utf8')
         curs = db.cursor()
         
         sql = '''insert into emp (empno, name, department, phone) values(%s,%s,%s,%s)'''
@@ -45,7 +45,7 @@ class MyEmpDao:
         db.close()
     
     def updEmp(self, empno, name, department,phone): 
-        db = pymysql.connect(host='marrycard.mysql.pythonanywhere-services.com', user='marrycard', db='marrycard$marrycard', password='wndnjsWkd!2', charset='utf8')
+        db = pymysql.connect(host='marrycard.mysql.pythonanywhere-services.com', user='marrycard', db='marrycard$merrycard', password='wndnjsWkd!2', charset='utf8')
         curs = db.cursor()
         
         sql = "update emp set name=%s, department=%s, phone=%s where empno=%s"
@@ -53,7 +53,7 @@ class MyEmpDao:
         db.commit()
         db.close()
     def delEmp(self, empno):
-        db = pymysql.connect(host='marrycard.mysql.pythonanywhere-services.com', user='marrycard', db='marrycard$marrycard', password='wndnjsWkd!2', charset='utf8')
+        db = pymysql.connect(host='marrycard.mysql.pythonanywhere-services.com', user='marrycard', db='marrycard$merrycard', password='wndnjsWkd!2', charset='utf8')
         curs = db.cursor()
         
         sql = "delete from emp where empno=%s"
